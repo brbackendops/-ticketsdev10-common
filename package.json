@@ -1,6 +1,6 @@
 {
   "name": "@ticketsdev10/common",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "scripts": {
