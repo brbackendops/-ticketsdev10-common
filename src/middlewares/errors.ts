@@ -1,5 +1,5 @@
-import AuthError from "../errors/auth-errors";
-import ExistsError from "../errors/exists-errors";
+import {AuthError} from "../errors/auth-errors";
+import {ExistsError} from "../errors/exists-errors";
 import type { NextFunction , Response , Request , RequestHandler  } from "express";
 import { ZodError } from "zod";
 
