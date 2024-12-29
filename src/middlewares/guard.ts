@@ -1,6 +1,6 @@
 import { NextFunction, Request , Response } from 'express';
 import { verifyToken } from '../pkg/jwt';
-import AuthError from '../errors/auth-errors';
+import { AuthError } from '../errors/auth-errors';
 
 interface UserPayload {
     id: string;
