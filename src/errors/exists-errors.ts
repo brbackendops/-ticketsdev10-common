@@ -1,4 +1,4 @@
-export default class ExistsError extends Error {
+export class ExistsError extends Error {
     
     statusCode: number = 409
 

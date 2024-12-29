@@ -1,6 +1,4 @@
-
-
-export default class AuthError extends Error {
+export class AuthError extends Error {
     statusCode = 401;
 
     constructor(message: string){
