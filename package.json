@@ -1,12 +1,22 @@
 {
   "name": "@ticketsdev10/common",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "scripts": {
-    
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git -m commit -m \"Updates\" && npm version patch && npm run build && npm publish "
   },
+  "files": [
+    "build/**/*"
+  ],
   "keywords": [],
   "author": "rohit br",
   "license": "ISC",
-  "description": "common lib to share between tickets.dev app"
+  "description": "common lib to share between tickets.dev app",
+  "devDependencies": {
+    "del-cli": "^6.0.0",
+    "typescript": "^5.7.2"
+  }
 }
