@@ -4,9 +4,9 @@
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "scripts": {
-    "clean": "del ./build/*",
+    "clean": "del /build/*",
     "build": "npm run clean && tsc",
-    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish "
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
   "files": [
     "build/**/*"
