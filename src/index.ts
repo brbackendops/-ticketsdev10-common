@@ -1,13 +1,15 @@
-interface Color {
-    red: number;
-    blue: number;
-    green: number;
-}
+// errors
+export * from './errors/auth-errors';
+export * from './errors/db-errors';
+export * from './errors/exists-errors';
 
-const color: Color = {
-    red: 10,
-    blue: 10,
-    green: 10
-}
 
-console.log(color)
+// middlewares
+export * from './middlewares/transformer';
+export * from './middlewares/guard';
+
+
+// pkg
+export * from './pkg/hash/index';
+export * from './pkg/jwt/index';
+
