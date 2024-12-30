@@ -7,6 +7,7 @@ export * from './errors/exists-errors';
 // middlewares
 export * from './middlewares/transformer';
 export * from './middlewares/guard';
+export * from './middlewares/errors';
 
 
 // pkg
