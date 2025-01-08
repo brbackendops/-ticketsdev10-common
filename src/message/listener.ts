@@ -3,21 +3,6 @@ import { randomBytes } from 'crypto';
 import { Subject } from './subjects';
 import { Event } from './utils';
 
-const stan = nat.connect(
-    'tickets',
-    randomBytes(4).toString('hex'),
-    {
-        url:'http://localhost:4222'
-    }
-)
-
-stan.on('connect', () => {
-    console.log('Listener connected')
-    stan.on('close', () => {
-        console.log("NATS connection closed")
-        process.exit();
-    });
-});
  
 
 export abstract class Listener<T extends Event> {
@@ -68,12 +53,3 @@ export abstract class Listener<T extends Event> {
         return JSON.parse(data.toString('utf-8'))
     }
 }
-
-
-process.on('SIGINT', () => {
-    stan.close()
-});
-
-process.on('SIGTERM', () => {
-    stan.close()
-});
