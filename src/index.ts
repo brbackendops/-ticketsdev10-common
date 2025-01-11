@@ -20,3 +20,4 @@ export * from './message/listener';
 export * from './message/publish';
 export * from './message/subjects';
 export * from './message/utils';
+export * from './message/mtypes/order.status';
